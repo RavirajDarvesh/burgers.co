@@ -1,0 +1,501 @@
+:root{
+    --dark:#0e1d2b;
+    --orange:#ffa326;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* body{
+   font-family: 'Rubik', sans-serif;
+    font-family: 'Martel', serif;
+}*/
+
+.container{
+    width: 75%;
+    margin: auto;
+}
+
+
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    'brand links';
+}
+.brand{
+    grid-area: brand;
+}
+.brand a{
+color: #0e1d2b;
+font-family: Martel;
+font-weight: 400;
+text-transform: uppercase;
+text-decoration: none;
+}
+.brand span{
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.links{
+    grid-area: links;
+    display: grid;
+    align-content: center;
+    justify-content: flex-end;
+}
+.links ul{
+    padding: 0;
+    margin: 0;
+}
+
+.links li{
+    list-style: none;
+    margin: 1em;
+    display: inline;
+    padding: 0.5rem;
+}
+
+
+.links a{
+color: var(--dark);
+font-family: Martel;
+font-size: 16px;
+font-weight: 400;
+line-height: 17.39px;
+letter-spacing: -0.63px;
+text-decoration: none;
+
+}
+
+.links li:hover{
+    border-bottom: 2px solid var(--orange);  
+}
+.links a:hover{
+    font-weight: bold;
+}
+
+
+.firstrow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'left right';
+    height: 35em;
+}
+.left{
+    display: grid;
+    grid-area: left;
+    background-image: linear-gradient( rgba(13,30,45,0.95), rgba(13,30,45,0.95)),url("images/tomato-1205699_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    justify-content: center;
+
+}
+.left h1{
+    color: #ffa326;
+    font-family: Rubik;
+    font-size: 65px;
+    font-weight: 500;
+    margin: 1.5rem;
+}
+.left p{
+    color: #ffffff;
+    font-family: Martel;
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+.right{
+    display: grid;
+    grid-area: right;
+    background-image: linear-gradient( rgba(255,163,38,0.9),rgba(255,163,38,0.9)),url("images/abstract-1238247_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    justify-content: center;
+   
+}
+.right h1{
+    color: #ffffff;
+    font-family: Rubik;
+    font-size: 65px;
+    font-weight: 500;
+    margin: 1rem;
+}
+.right p{
+    color: #0d1e2d;
+    font-family: Martel;
+    font-size: 20px;
+    font-weight: 400;
+}
+.right a{
+    font-weight: bold;
+    color: #0d1e2d;
+    background-color: white;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    margin: 1em;
+}
+
+.secondrow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'col-1 col-2 col-3';
+    justify-content: center;
+    align-content: center;
+    height: 30em;
+    margin:4em auto;
+}
+
+.secondrow img{
+    width: 100%;
+    height: auto;
+}
+
+.col-1{
+    
+    grid-area: col-1;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-image: url("images/burger-1-back.png");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.col-2{
+    display: grid;
+    grid-area: col-2;
+    justify-content: center;
+    align-content: center;
+    background-image: url("images/burger-2-back.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    
+}
+.col-3{
+    grid-area: col-3;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-image: url("images/burger-3-back.png");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.secondrow h2{
+    color: var(--orange);
+    font-size: 2em;
+    font-family: Rubik;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0;
+    text-align: center;
+}
+.secondrow p{
+    font-size: 1.3rem;
+    font-family: Rubik;
+    text-align: center;
+}
+.b-info{
+    background-color: lightgray;
+    color: black;
+    padding: 1rem 2rem;
+    align-self: center;
+    text-align: center;
+    font-family: Rubik;
+}
+
+.thirdrow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'wait prod-list';
+    justify-content: center;
+    align-content: center;
+    background-image:linear-gradient( rgba(13,30,45,0.95),rgba(255,163,38,0.5)),url("images/food-1081707_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 40em;
+    grid-column-gap: 5em;
+}
+
+.wait{
+    display: grid;
+    grid-area: wait;
+    justify-content: flex-end;
+    align-content: center;
+    font-family: Rubik;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+.prod-list{
+    display: grid;
+    grid-area: prod-list;
+    justify-content: flex-start;
+    align-content: center;
+    grid-gap: 3em;
+   
+}
+.prod-list ul{
+    padding: 4em;
+    display: grid; 
+    border: 4px solid #ffa326;
+    justify-content: flex-start;
+    grid-row-gap: 1em;
+   
+}
+.prod-list li{
+    list-style: none;
+    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 8em;
+    height: 2em; 
+}
+.prod-list p{
+    font-family: Rubik;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+    
+}
+.prod-list span{   
+    font-family: Rubik;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.photosHeader{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: Rubik;
+}
+.photosHeader h1{
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 1rem;
+   
+}
+.photosHeader p{
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+}
+
+.gallery{
+    width: 75%;
+    margin:4em auto;
+    display: grid;
+    grid-gap: 2em;
+    justify-content: center;
+}
+.gridBox img{
+    width: 100%;
+}
+
+.bigImages{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2em;
+    justify-content: center;
+}
+
+.smallImages{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 2em;
+    justify-content: center;
+}
+
+.contactHeader{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: Rubik;
+}
+.contactHeader h1{
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 1rem;
+   
+}
+.contactHeader p{
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+}
+
+
+.contactBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'contact address';
+    background-color: #0d1e2d;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.contact{
+    display: grid;
+    grid-area: contact;
+    align-content: center;
+    justify-content: center;
+    margin: 5em auto;
+}
+.contact p{
+    margin: 1em;
+    font-family: Rubik;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+form{
+    display: grid;
+    grid-row-gap: 1em;
+    }
+form input, form textarea{
+    padding: 1rem;
+    font-family: Rubik;
+    font-size: 1em;
+}
+#submit{
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    font-size: 1.5em;
+}
+
+.map{
+    margin: 2em;
+    min-height: 350px;
+    background-image: url("images/map.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.address{
+    display: grid;
+    grid-area: address;
+    align-content: center;
+    justify-content: center;
+    margin: 5em auto;
+}
+
+.address p{
+    font-family: Martel;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    margin:0;
+}
+.address span{
+    font-size: 2.5em;
+    color: var(--orange);
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer{
+    display: grid;
+    background-color: #020a11;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.footer p, .developer a{
+    display: grid;
+    color: var(--orange);
+    font-family: Rubik;
+    font-size: 1em;
+    text-decoration: none;
+    justify-content: center;
+    margin: 2em;
+    font-weight: 800;
+}
+
+
+@media only screen and (max-width:720px){
+
+    .container{
+        width: 100%;
+    }
+
+    .navbar{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'brand'
+        'links';
+        margin-bottom: 1em;
+    }
+
+    .brand{
+        justify-content: center;
+        text-align: center;
+    }
+    .links{
+        justify-content: center;
+    }
+    .links li{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .firstrow{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'left'
+        'right';
+        height: auto;
+    }
+    .firstrow p{
+        margin: 1em;
+    }
+
+    .secondrow{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'col-1'
+        'col-2'
+        'col-3';
+        height: auto;
+    }
+
+    .thirdrow{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'wait'
+        'prod-list';
+        height: auto;
+    }
+
+    .contactBody{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'contact'
+        'address';
+    }
+
+    .wait{
+        justify-content: center;
+    }
+
+    form{
+        margin: 1em;
+    }
+
+    .footer{
+        grid-template-columns: 1fr;
+    }
+
+}
